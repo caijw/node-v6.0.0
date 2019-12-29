@@ -156,9 +156,9 @@ static bool prof_process = false;
 static bool v8_is_profiling = false;
 static bool node_is_initialized = false;
 static node_module* modpending;
-static node_module* modlist_builtin;
-static node_module* modlist_linked;
-static node_module* modlist_addon;
+static node_module* modlist_builtin; // 内置c++模块
+static node_module* modlist_linked; // init 之前加载的c++模块
+static node_module* modlist_addon; // 第三方c++模块
 
 #if defined(NODE_HAVE_I18N_SUPPORT)
 // Path to ICU data (for i18n / Intl)
